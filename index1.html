@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Carspotting</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Zilla Slab", serif;
+            font-weight: 300;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        header {
+            background-color: #9db6c8;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+        }
+
+        #navbar .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-left: 16px;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        #navbar ul li {
+            margin: 0 10px;
+        }
+
+        #navbar ul li a {
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #navbar ul li a:hover {
+            background-color: #718a9b;
+            color: white;
+        }
+
+        #showcase {
+            background: #6c777f url("img/cars.jpg") no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: whitesmoke;
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+        .showcase-content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+        .l-heading {
+            font-size: 3rem;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            margin: 1rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            color: white;
+            background-color: #777696;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #a6cce6;
+        }
+
+    
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .l-heading {
+                font-size: 2.5rem;
+            }
+
+            #navbar ul li {
+                margin: 0 5px;
+            }
+
+            #navbar ul li a {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav id="navbar">
+        <div class="logo">
+            CARSPOTTING <i class="fa-solid fa-car-on"></i><i class="fa-solid fa-photo-film"></i>
+        </div>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#range-of-services">SLUŽBY</a></li>
+            <li><a href="#prices">CENY</a></li>
+            <li><a href="#photos">FOTKY</a></li>
+            <li><a href="#about-us">O NÁS</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="home">
+    <div id="showcase">
+        <div class="showcase-content">
+            <h1 class="l-heading">CARSPOTTING</h1>
+            <p class="lead">Naše firma Vám nabízí kvalitní fotografie a videa Vašich každodenních miláčků.</p>
+            <p>Fotografie i videa jsou pořizovány profesionály, takže se není čeho obávat.</p>
+            <p>Chceš dopřát sobě nebo svým blízkým hmotnou vzpomínku na své auto?<br>TAK NA CO JEŠTĚ ČEKÁŠ?</p>
+            <br><a href="#about-us" class="btn">Chci vědět víc</a>
+        </div>
+    </div>
+</main>
+
+<section id="range-of-services">
+    <h2>Naše služby</h2>
+    <p>Zajišťujeme profesionální fotografování a natáčení aut v různých prostředích.</p>
+</section>
+
+<section id="prices">
+    <h2>Ceník</h2>
+    <p>Prohlédněte si naše cenové balíčky pro různé služby.</p>
+</section>
+
+<section id="photos">
+    <h2>Ukázkové fotografie</h2>
+    <p>Prohlédněte si naši galerii s ukázkami naší práce.</p>
+</section>
+
+<section id="about-us">
+    <h2>O nás</h2>
+    <p>Jsme tým profesionálů, kteří se specializují na fotografování a videoprodukci automobilů.</p>
+</section>
+
+</body>
+</html>
