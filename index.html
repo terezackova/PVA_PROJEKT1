@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Menu</title>
+    <title>Carspotting</title>
     <style>
         * {
             box-sizing: border-box;
@@ -16,17 +16,70 @@
             font-family: "Zilla Slab", serif;
             font-weight: 300;
             color: #333;
+            line-height: 1.5;
+        }
+
+        header {
+            background-color: #9db6c8;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+        }
+
+        #navbar .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-left: 16px;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        #navbar ul li {
+            margin: 0 10px;
+        }
+
+        #navbar ul li a {
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #navbar ul li a:hover {
+            background-color: #718a9b;
+            color: white;
+        }
+
+        #showcase {
+            background: #6c777f url("img/cars.jpg") no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: whitesmoke;
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+        .showcase-content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.55);
         }
 
         .l-heading {
-            font-size: 4rem;
-            margin-bottom: 0.75rem;
-            line-height: 1.1;
+            font-size: 3rem;
         }
 
         .lead {
             font-size: 1.3rem;
-            margin-bottom: 2rem;
+            margin: 1rem 0;
         }
 
         .btn {
@@ -37,83 +90,86 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;
+            font-size: 1rem;
         }
 
         .btn:hover {
             background-color: #a6cce6;
         }
 
-        #navbar {
-            display: flex;
-            background-color: #9db6c8;
-            justify-content: space-around;
-            height: 50px;
-        }
-
-        #navbar .logo {
-            font-weight: bold;
-            font-size: larger;
-            margin: 0 16px;
-            display: flex;
-            align-items: center;
-        }
-
-        #navbar ul {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        #navbar ul li a {
-            padding: 12px;
-            margin: 0 4px;
-            text-decoration: none;
-            color: black;
-        }
-
-        #navbar ul li a:hover {
-            background-color: #718a9b;
-        }
-
-        #showcase {
-            background: #6c777f url("https://terezackova.github.io/projekt12233423432/img/cars.jpg") no-repeat center/cover;
-            height: 100vh;
-            color: whitesmoke;
-        }
-
-        #showcase .showcase-content {
-            display: flex;
-            flex-direction: column;
+    
+        section {
+            padding: 50px 20px;
             text-align: center;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            padding: 0 2rem;
-            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+        @media (max-width: 768px) {
+            .l-heading {
+                font-size: 2.5rem;
+            }
+
+            #navbar ul li {
+                margin: 0 5px;
+            }
+
+            #navbar ul li a {
+                padding: 8px;
+            }
         }
     </style>
 </head>
 <body>
+
+<header>
     <nav id="navbar">
         <div class="logo">
             CARSPOTTING <i class="fa-solid fa-car-on"></i><i class="fa-solid fa-photo-film"></i>
         </div>
         <ul>
             <li><a href="#home">HOME</a></li>
-            <li><a href="#range-of-services">RANGE OF SERVICES</a></li>
-            <li><a href="#prices">PRICES</a></li>
-            <li><a href="#photos">PHOTOS</a></li>
-            <li><a href="#about-us">ABOUT US</a></li>
+            <li><a href="#range-of-services">SLUŽBY</a></li>
+            <li><a href="#prices">CENY</a></li>
+            <li><a href="#photos">FOTKY</a></li>
+            <li><a href="#about-us">O NÁS</a></li>
         </ul>
     </nav>
+</header>
+
+<main id="home">
     <div id="showcase">
         <div class="showcase-content">
             <h1 class="l-heading">CARSPOTTING</h1>
             <p class="lead">Naše firma Vám nabízí kvalitní fotografie a videa Vašich každodenních miláčků.</p>
             <p>Fotografie i videa jsou pořizovány profesionály, takže se není čeho obávat.</p>
             <p>Chceš dopřát sobě nebo svým blízkým hmotnou vzpomínku na své auto?<br>TAK NA CO JEŠTĚ ČEKÁŠ?</p>
-            <br><a href="#" class="btn">Chci vědět víc</a>
+            <br><a href="#about-us" class="btn">Chci vědět víc</a>
         </div>
     </div>
+</main>
+
+<section id="range-of-services">
+    <h2>Naše služby</h2>
+    <p>Zajišťujeme profesionální fotografování a natáčení aut v různých prostředích.</p>
+    <h4>Zachycení automobilu v našich prostorech:
+        <p>základní - 1 fotografie - 600,-</p>
+        <p></p>
+    </h4>
+</section>
+
+<section id="prices">
+    <h2>Ceník</h2>
+    <p>Prohlédněte si naše cenové balíčky pro různé služby.</p>
+</section>
+
+<section id="photos">
+    <h2>Ukázkové fotografie</h2>
+    <p>Prohlédněte si naši galerii s ukázkami naší práce.</p>
+</section>
+
+<section id="about-us">
+    <h2>O nás</h2>
+    <p>Jsme tým profesionálů, kteří se specializují na fotografování a videoprodukci automobilů.</p>
+</section>
+
 </body>
 </html>
