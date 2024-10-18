@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Zilla Slab", serif;
+            font-weight: 300;
+            color: #333;
+        }
+
+        .l-heading {
+            font-size: 4rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.1;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            color: white;
+            background-color: #777696;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #a6cce6;
+        }
+
+        #navbar {
+            display: flex;
+            background-color: #9db6c8;
+            justify-content: space-around;
+            height: 50px;
+        }
+
+        #navbar .logo {
+            font-weight: bold;
+            font-size: larger;
+            margin: 0 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        #navbar ul li a {
+            padding: 12px;
+            margin: 0 4px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #navbar ul li a:hover {
+            background-color: #718a9b;
+        }
+
+        #showcase {
+            background: #6c777f url("img/cars.jpg") no-repeat center/cover;
+            height: 100vh;
+            color: whitesmoke;
+        }
+
+        #showcase .showcase-content {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0 2rem;
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            CARSPOTTING <i class="fa-solid fa-car-on"></i><i class="fa-solid fa-photo-film"></i>
+        </div>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#range-of-services">RANGE OF SERVICES</a></li>
+            <li><a href="#prices">PRICES</a></li>
+            <li><a href="#photos">PHOTOS</a></li>
+            <li><a href="#about-us">ABOUT US</a></li>
+        </ul>
+    </nav>
+    <div id="showcase">
+        <div class="showcase-content">
+            <h1 class="l-heading">CARSPOTTING</h1>
+            <p class="lead">Naše firma Vám nabízí kvalitní fotografie a videa Vašich každodenních miláčků.</p>
+            <p>Fotografie i videa jsou pořizovány profesionály, takže se není čeho obávat.</p>
+            <p>Chceš dopřát sobě nebo svým blízkým hmotnou vzpomínku na své auto?<br>TAK NA CO JEŠTĚ ČEKÁŠ?</p>
+            <br><a href="#" class="btn">Chci vědět víc</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -58,7 +58,7 @@
         }
 
         #showcase {
-            background: #6c777f url("img/cars.jpg") no-repeat center/cover;
+            background: #6c777f url("img/car1.jpg") no-repeat center/cover;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -97,10 +97,64 @@
             background-color: #a6cce6;
         }
 
-    
         section {
             padding: 50px 20px;
             text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color:none;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        ul li h3 {
+            margin: 0;
+            color: #195279;
+        }
+
+        ul li p {
+            margin: 5px 0;
+        }
+
+        ul li .price {
+            font-weight: bold;
+            color: #5f1065;
+        }
+
+        /* Styl pro galerii */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 30px); /* Každý prvek zabírá třetinu šířky při dostatku prostoru */
+            max-width: calc(33.333% - 30px);
+            margin-bottom: 15px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
         }
 
         @media (max-width: 768px) {
@@ -115,6 +169,19 @@
             #navbar ul li a {
                 padding: 8px;
             }
+
+            /* Galerijní obrázky se na menších zařízeních přizpůsobí */
+            .gallery-item {
+                flex: 1 1 calc(50% - 15px);
+                max-width: calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -127,9 +194,8 @@
         </div>
         <ul>
             <li><a href="#home">HOME</a></li>
-            <li><a href="#range-of-services">SLUŽBY</a></li>
-            <li><a href="#prices">CENY</a></li>
-            <li><a href="#photos">FOTKY</a></li>
+            <li><a href="#range-of-services">CENÍK SLUŽEB</a></li>
+            <li><a href="#photos">GALERIE</a></li>
             <li><a href="#about-us">O NÁS</a></li>
         </ul>
     </nav>
@@ -148,27 +214,103 @@
 </main>
 
 <section id="range-of-services">
-    <h2>Naše služby</h2>
-    <p>Zajišťujeme profesionální fotografování a natáčení aut v různých prostředích.</p>
-    <h4>Zachycení automobilu v našich prostorech:
-        <p>základní - 1 fotografie - 600,-</p>
-        <p></p>
-    </h4>
-</section>
-
-<section id="prices">
-    <h2>Ceník</h2>
-    <p>Prohlédněte si naše cenové balíčky pro různé služby.</p>
+        <h2>Naše služby</h2>
+        <p>Zajišťujeme profesionální fotografování a natáčení aut v různých prostředích.</p>
+    
+        <ul>
+            <li>
+                <h3>Profesionální fotografování automobilů</h3>
+                <p>Detailní snímky exteriéru, interiéru a 360° pohledy.</p>
+                <ul>
+                    <li>Exteriér a interiér: <span class="price">od 5 000 Kč</span></li>
+                    <li>Lifestyle fotografie: <span class="price">od 7 000 Kč</span></li>
+                    <li>Studiové fotografie: <span class="price">od 6 000 Kč</span></li>
+                    <li>360° fotografie: <span class="price">od 8 000 Kč</span></li>
+                </ul>
+            </li>
+            
+            <li>
+                <h3>Videoprodukce</h3>
+                <p>Vytváříme dynamická reklamní videa, prezentace a akční záběry vozů.</p>
+                <ul>
+                    <li>Reklamní videa: <span class="price">od 12 000 Kč</span></li>
+                    <li>Prezentační videa: <span class="price">od 10 000 Kč</span></li>
+                    <li>Akční záběry: <span class="price">od 15 000 Kč</span></li>
+                    <li>Videotesty: <span class="price">od 9 000 Kč</span></li>
+                </ul>
+            </li>
+    
+            <li>
+                <h3>Postprodukční služby</h3>
+                <p>Retuše, úpravy fotografií a profesionální střih a editace videí.</p>
+                <ul>
+                    <li>Retuše fotografií: <span class="price">od 2 000 Kč</span></li>
+                    <li>Editace videa: <span class="price">od 3 500 Kč</span></li>
+                    <li>Animace a efekty: <span class="price">od 5 000 Kč</span></li>
+                </ul>
+            </li>
+    
+            <li>
+                <h3>Produktové prezentace pro dealery a výrobce</h3>
+                <p>Kvalitní fotografie a digitální showroomy.</p>
+                <ul>
+                    <li>Katalogové fotografie: <span class="price">od 4 000 Kč</span></li>
+                    <li>Online showroom: <span class="price">od 10 000 Kč</span></li>
+                    <li>Virtuální prohlídky: <span class="price">od 12 000 Kč</span></li>
+                </ul>
+            </li>
+    
+            <li>
+                <h3>Fotografie a video pro sociální sítě</h3>
+                <p>Obsah optimalizovaný pro Instagram, Facebook, YouTube a další platformy.</p>
+                <ul>
+                    <li>Obsah pro sociální sítě: <span class="price">od 3 000 Kč</span></li>
+                    <li>Behind-the-scenes: <span class="price">od 4 500 Kč</span></li>
+                </ul>
+            </li>
+    
+            <li>
+                <h3>Dronové záběry</h3>
+                <p>Akční letecké záběry z ptačí perspektivy.</p>
+                <ul>
+                    <li>Letecké záběry: <span class="price">od 7 000 Kč</span></li>
+                </ul>
+            </li>
+        </ul>
 </section>
 
 <section id="photos">
-    <h2>Ukázkové fotografie</h2>
-    <p>Prohlédněte si naši galerii s ukázkami naší práce.</p>
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="img/auto1.jpg" alt="Auto 1">
+        </div>
+        <div class="gallery-item">
+            <img src="img/auto2.jpg" alt="Auto 2">
+        </div>
+        <div class="gallery-item">
+            <img src="img/auto3.jpg" alt="Auto 3">
+        </div>
+        <div class="gallery-item">
+            <img src="img/auto4.jpg" alt="Auto 4">
+        </div>
+        <div class="gallery-item">
+            <img src="img/auto5.jpg" alt="Auto 5">
+        </div>
+        <div class="gallery-item">
+            <img src="img/auto6.jpg" alt="Auto 6">
+        </div>
+    </div>
 </section>
 
 <section id="about-us">
     <h2>O nás</h2>
-    <p>Jsme tým profesionálů, kteří se specializují na fotografování a videoprodukci automobilů.</p>
+   
+<p>Naše firma se specializuje na carspotting,<br> což je jedinečná oblast zaměřená na objevování, dokumentaci <br>a sdílení exkluzivních automobilů z celého světa. S vášní pro<br> automobilový design a technologie zachycujeme unikátní momenty, kdy se <br>nejnovější modely nebo vzácné sběratelské vozy objevují na veřejnosti.</p>
+<div></div>
+<p>Díky našemu týmu zkušených nadšenců a odborníků na <br>automobily poskytujeme nejen vizuálně atraktivní obsah, <br>ale také detailní informace o konkrétních modelech, jejich <br>technických specifikacích a příbězích, které za nimi stojí. Naším cílem je <br>přinést automobilovým fanouškům a profesionálům vhled <br>do světa těch nejvýjimečnějších vozidel, ať už se jedná <br>o novinky automobilového průmyslu nebo vzácné kousky z historie.</p>
+<div></div>
+<p>S našimi službami spojujeme estetiku a techniku, a tím <br>vytváříme unikátní obsah, který inspiruje <br>širokou automobilovou komunitu.</p>
 </section>
 
 </body>
